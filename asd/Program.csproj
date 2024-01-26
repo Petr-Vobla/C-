@@ -1,0 +1,39 @@
+﻿using System;
+class HelloWorld
+{
+    static void Main()
+    {
+        int[][] array = new int[][]
+
+        {
+
+        new int[] { 1, 2, 3 },
+
+        new int[] { 4, 5 },
+
+        new int[] { 6, 7, 8 }
+
+        };
+
+    }
+    static void func()
+    {
+               for (int i = 0; i < 3; i++)
+            {
+                if (i%2!=0)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        arrai[i] = i*j;
+                    }
+                }
+            }
+        }
+
+        foreach (int element in array)
+        {
+            Console.Write(element + " ");
+        }
+
+    }
+}

@@ -1,0 +1,15 @@
+/home/user/Документы/asd/bin/Debug/net6.0/asd
+/home/user/Документы/asd/bin/Debug/net6.0/asd.deps.json
+/home/user/Документы/asd/bin/Debug/net6.0/asd.runtimeconfig.json
+/home/user/Документы/asd/bin/Debug/net6.0/asd.dll
+/home/user/Документы/asd/bin/Debug/net6.0/ref/asd.dll
+/home/user/Документы/asd/bin/Debug/net6.0/asd.pdb
+/home/user/Документы/asd/obj/Debug/net6.0/asd.csproj.AssemblyReference.cache
+/home/user/Документы/asd/obj/Debug/net6.0/asd.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/Документы/asd/obj/Debug/net6.0/asd.AssemblyInfoInputs.cache
+/home/user/Документы/asd/obj/Debug/net6.0/asd.AssemblyInfo.cs
+/home/user/Документы/asd/obj/Debug/net6.0/asd.csproj.CoreCompileInputs.cache
+/home/user/Документы/asd/obj/Debug/net6.0/asd.dll
+/home/user/Документы/asd/obj/Debug/net6.0/ref/asd.dll
+/home/user/Документы/asd/obj/Debug/net6.0/asd.pdb
+/home/user/Документы/asd/obj/Debug/net6.0/asd.genruntimeconfig.cache
