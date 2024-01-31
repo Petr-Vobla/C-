@@ -1,0 +1,216 @@
+using System;
+
+public abstract class BaseArray
+{
+    public abstract void Initialize(bool fillByUser = false);
+    public abstract double GetAverage();
+    public abstract void PrintArray();
+}
+
+public sealed class OneDimensionalArray : BaseArray
+{
+    private int[] array;
+
+    public override void Initialize(bool fillByUser = false)
+    {
+        Console.WriteLine("Initializing one-dimensional array...");
+        Console.Write("Enter the length of the array: ");
+        int length = int.Parse(Console.ReadLine());
+        array = new int[length];
+
+        if (fillByUser)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"Enter element at index {i + 1}: ");
+                array[i] = int.Parse(Console.ReadLine());
+            }
+        }
+        else
+        {
+            Random random = new Random();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = random.Next(100);
+            }
+        }
+    }
+
+    public override double GetAverage()
+    {
+        double sum = 0;
+
+        foreach (int value in array)
+        {
+            sum += value;
+        }
+
+        return sum / array.Length;
+    }
+
+    public override void PrintArray()
+    {
+        Console.WriteLine("Printing one-dimensional array...");
+        foreach (int value in array)
+        {
+            Console.Write(value + " ");
+        }
+
+        Console.WriteLine();
+    }
+}
+
+public sealed class MultiDimensionalArray : BaseArray
+{
+    private int[,] array;
+
+    public override void Initialize(bool fillByUser = false)
+    {
+        Console.WriteLine("Initializing multi-dimensional array...");
+        Console.Write("Enter the number of rows: ");
+        int rows = int.Parse(Console.ReadLine());
+        Console.Write("Enter the number of columns: ");
+        int columns = int.Parse(Console.ReadLine());
+        array = new int[rows, columns];
+
+        if (fillByUser)
+        {
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    Console.Write($"Enter element at index [{i + 1}, {j + 1}]: ");
+                    array[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+        }
+        else
+        {
+            Random random = new Random();
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    array[i, j] = random.Next(100);
+                }
+            }
+        }
+    }
+
+    public override double GetAverage()
+    {
+        double sum = 0;
+
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                sum += array[i, j];
+            }
+        }
+
+        return sum / (array.GetLength(0) * array.GetLength(1));
+    }
+
+    public override void PrintArray()
+    {
+        Console.WriteLine("Printing multi-dimensional array...");
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                Console.Write(array[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+public sealed class JaggedArray : BaseArray
+{
+    private int[][] array;
+
+    public override void Initialize(bool fillByUser = false)
+    {
+        Console.WriteLine("Initializing jagged array...");
+        Console.Write("Enter the number of rows: ");
+        int rows = int.Parse(Console.ReadLine());
+        array = new int[rows][];
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write($"Enter the number of elements in row {i + 1}: ");
+            int length = int.Parse(Console.ReadLine());
+            array[i] = new int[length];
+
+            if (fillByUser)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    Console.Write($"Enter element in row {i + 1} at index {j + 1}: ");
+                    array[i][j] = int.Parse(Console.ReadLine());
+                }
+            }
+            else
+            {
+                Random random = new Random();
+
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    array[i][j] = random.Next(100);
+                }
+            }
+        }
+    }
+
+    public override double GetAverage()
+    {
+        double sum = 0;
+        int elementsCount = 0;
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            for (int j = 0; j < array[i].Length; j++)
+            {
+                sum += array[i][j];
+                elementsCount++;
+            }
+        }
+
+        return sum / elementsCount;
+    }
+
+    public override void PrintArray()
+    {
+        Console.WriteLine("Printing jagged array...");
+        for (int i = 0; i < array.Length; i++)
+        {
+            for (int j = 0; j < array[i].Length; j++)
+            {
+                Console.Write(array[i][j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        BaseArray[] array = new BaseArray[3];
+        array[0] = new OneDimensionalArray();
+        array[1] = new MultiDimensionalArray();
+        array[2] = new JaggedArray();
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.WriteLine($"Operations for array {i + 1}");
+            array[i].Initialize();
+            double average = array[i].GetAverage();
+            Console.WriteLine($"Average: {average}");
+            array[i].PrintArray();
+        }
+    }
+}
