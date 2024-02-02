@@ -1,0 +1,15 @@
+/home/user/Рабочий стол/К/OOП/Booster/3-2/bin/Debug/net6.0/3-2
+/home/user/Рабочий стол/К/OOП/Booster/3-2/bin/Debug/net6.0/3-2.deps.json
+/home/user/Рабочий стол/К/OOП/Booster/3-2/bin/Debug/net6.0/3-2.runtimeconfig.json
+/home/user/Рабочий стол/К/OOП/Booster/3-2/bin/Debug/net6.0/3-2.dll
+/home/user/Рабочий стол/К/OOП/Booster/3-2/bin/Debug/net6.0/ref/3-2.dll
+/home/user/Рабочий стол/К/OOП/Booster/3-2/bin/Debug/net6.0/3-2.pdb
+/home/user/Рабочий стол/К/OOП/Booster/3-2/obj/Debug/net6.0/3-2.csproj.AssemblyReference.cache
+/home/user/Рабочий стол/К/OOП/Booster/3-2/obj/Debug/net6.0/3-2.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/Рабочий стол/К/OOП/Booster/3-2/obj/Debug/net6.0/3-2.AssemblyInfoInputs.cache
+/home/user/Рабочий стол/К/OOП/Booster/3-2/obj/Debug/net6.0/3-2.AssemblyInfo.cs
+/home/user/Рабочий стол/К/OOП/Booster/3-2/obj/Debug/net6.0/3-2.csproj.CoreCompileInputs.cache
+/home/user/Рабочий стол/К/OOП/Booster/3-2/obj/Debug/net6.0/3-2.dll
+/home/user/Рабочий стол/К/OOП/Booster/3-2/obj/Debug/net6.0/ref/3-2.dll
+/home/user/Рабочий стол/К/OOП/Booster/3-2/obj/Debug/net6.0/3-2.pdb
+/home/user/Рабочий стол/К/OOП/Booster/3-2/obj/Debug/net6.0/3-2.genruntimeconfig.cache
