@@ -175,22 +175,21 @@ public class GenMatrix
 
     public void PrintArrayWithEvenReversedRows()
     {
-
         for (int i = 0; i < array.GetLength(0); i++)
         {
-            if (i % 2 == 1)
-            {
-                for (int j = array.GetLength(1) - 1; j >= 0; j--)
+            for (int j = 0; j < array.GetLength(1); j++)
+            {  
+                int IndexColumn;
+                if (i % 2 == 1)
                 {
-                    Console.Write(array[i, j] + " ");
+                    IndexColumn =  array.GetLength(1) - 1 - j;
                 }
-            }
-            else
-            {
-                for (int j = 0; j < array.GetLength(1); j++)
+                else
                 {
-                    Console.Write(array[i, j] + " ");
+                    IndexColumn = j;
                 }
+                Console.Write(array[i, IndexColumn] + " ");
+
             }
 
             Console.WriteLine();

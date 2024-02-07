@@ -22,7 +22,7 @@ public class GenMatrix
         {
             for (int j = 0; j < array.GetLength(1); j++)
             {
-                Console.Write($"Введите элемент под номером [{i + 1}, {j + 1}]: ");
+                Console.Write($"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ [{i + 1}, {j + 1}]: ");
                 array[i, j] = int.Parse(Console.ReadLine());
             }
         }
@@ -74,19 +74,19 @@ public class GenMatrix
 
         for (int i = 0; i < array.GetLength(0); i++)
         {
-            if (i % 2 == 1)
-            {
-                for (int j = array.GetLength(1) - 1; j >= 0; j--)
+            for (int j = 0; j < array.GetLength(1); j++)
+            {   int IndexColumn;
+
+                if (i % 2 == 1)
                 {
-                    Console.Write(array[i, j] + " ");
+                    IndexColumn =  array.GetLength(1) - 1 - j;
                 }
-            }
-            else
-            {
-                for (int j = 0; j < array.GetLength(1); j++)
+                else
                 {
-                    Console.Write(array[i, j] + " ");
+                    IndexColumn = j
                 }
+                Console.Write(array[i, IndexColumn] + " ");
+
             }
 
             Console.WriteLine();
