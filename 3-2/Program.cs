@@ -17,16 +17,16 @@ class Program
             Console.WriteLine($"Cреднее: {average}");
             array[i].PrintArray();
         }
-        Array Array = new Array();
-        Array.DeleteElementsBiggerThan100();
-        Array.RemoveDuplicates();
+        Array _Array = new _Array();
+        _Array.DeleteElementsBiggerThan100();
+        _Array.RemoveDuplicates();
 
-        Matrix Matrix = new Matrix();
-        Matrix.PrintArrayWithEvenReversedRows();
+        Matrix _Matrix = new Matrix();
+        _Matrix.PrintArrayWithEvenReversedRows();
 
-        JaggedArray JaggedArray = new JaggedArray();
-        JaggedArray.GetAveragesInInnerArrays();
-        JaggedArray.ChangeEvenElements();
+        JaggedArray _JaggedArray = new JaggedArray();
+        _JaggedArray.GetAveragesInInnerArrays();
+        _JaggedArray.ChangeEvenElements();
     }
         
        
